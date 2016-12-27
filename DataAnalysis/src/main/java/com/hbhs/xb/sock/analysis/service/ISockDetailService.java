@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface ISockDetailService {
 
-    void saveSockDetailList(List<SockSummary> summaryList);
+    void saveSockDetailListAsyn(List<SockSummary> summaryList, String plateID);
 }

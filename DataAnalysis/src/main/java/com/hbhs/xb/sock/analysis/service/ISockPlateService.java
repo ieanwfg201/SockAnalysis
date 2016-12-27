@@ -8,5 +8,5 @@ import java.util.List;
  * Created by walter.xu on 2016/12/26.
  */
 public interface ISockPlateService {
-    void saveSockPlateList(List<SockPlateSummary> summaryList);
+    void saveSockPlateListAsyn(List<SockPlateSummary> summaryList);
 }

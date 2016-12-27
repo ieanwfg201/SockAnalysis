@@ -22,7 +22,7 @@ import java.util.List;
  * @author Walter.xu
  */
 public class HttpRequestUtils {
-    protected static String ENCODE = "";
+    public static String ENCODE = "GBK";
     /**
      * @param url           Example: <br>http://localhost:8080/sigmad/api/tracking/advertiser/query <br>
      *                      http://localhost:8080/sigmad/api/tracking/advertiser/query?advertiserID=1
@@ -112,8 +112,9 @@ public class HttpRequestUtils {
         BufferedReader reader = null;
         try {
             if (ENCODE!=null&&!ENCODE.trim().equals(""))
-                reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-            else reader = new BufferedReader(new InputStreamReader(is));
+                reader = new BufferedReader(new InputStreamReader(is, ENCODE));
+            else
+                reader = new BufferedReader(new InputStreamReader(is));
             String line = reader.readLine();
             while (line != null) {
                 str.append(line + "\n");
@@ -374,11 +375,11 @@ public class HttpRequestUtils {
     }
 
     /**
-     * é”®å€¼å¯¹
+     * ¼üÖµ¶Ô
      *
      * @author Walter.xu
      * @ClassName: KeyValuePair
-     * @date 2016å¹´2æœˆ17æ—¥ ä¸‹åˆ6:44:45
+     * @date 2016Äê2ÔÂ17ÈÕ ÏÂÎç6:44:45
      */
     public static class KeyValuePair {
         private String key;

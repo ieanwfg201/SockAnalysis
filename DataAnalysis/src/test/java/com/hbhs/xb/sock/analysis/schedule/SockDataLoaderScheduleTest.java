@@ -15,5 +15,6 @@ public class SockDataLoaderScheduleTest extends BaseTest {
     @Test
     public void testRunTask() throws Exception {
         schedule.runTask();
+        Thread.sleep(100000);
     }
 }

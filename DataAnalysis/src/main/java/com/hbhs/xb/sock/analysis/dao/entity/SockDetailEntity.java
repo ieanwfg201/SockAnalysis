@@ -18,6 +18,7 @@ public class SockDetailEntity implements Serializable {
     private String symbol;            // 标识，如sz/sh
     private String sockID;            // 股票id
     private String sockName;          // 名称
+    private String plateID;           // plate ID
     private double price;             // 当前价格
     private double priceChange;       // 价格变动
     private double priceChangePersent;     // 价格变动百分比
@@ -196,5 +197,13 @@ public class SockDetailEntity implements Serializable {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getPlateID() {
+        return plateID;
+    }
+
+    public void setPlateID(String plateID) {
+        this.plateID = plateID;
     }
 }

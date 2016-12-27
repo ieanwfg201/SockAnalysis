@@ -17,6 +17,7 @@ public class HttpRequestUtilsTest {
 
     @Test
     public void testLoadSinaWholeSock() throws Exception{
+        HttpRequestUtils.ENCODE = "GBK";
         String address = "http://hq.sinajs.cn/?rn="+new Date().getTime()+"&list=sh000001";
         String data = HttpRequestUtils.get(address, null, null);
         System.out.println(data);
@@ -24,6 +25,7 @@ public class HttpRequestUtilsTest {
     @Test
     public void testLoadSinaPlateSockSummary(){
         String address = "http://vip.stock.finance.sina.com.cn/q/view/newSinaHy.php";
+        HttpRequestUtils.ENCODE = "GBK";
         String data = HttpRequestUtils.get(address, null, null);
         System.out.println(data);
     }
