@@ -1,8 +1,8 @@
 package com.hbhs.xb.sock.analysis.schedule;
 
-import com.hbhs.xb.sock.analysis.entity.SockMarketSummary;
-import com.hbhs.xb.sock.analysis.entity.SockPlateSummary;
-import com.hbhs.xb.sock.analysis.entity.SockSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockMarketSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockPlateSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockSummary;
 import com.hbhs.xb.sock.analysis.service.ISockDetailService;
 import com.hbhs.xb.sock.analysis.service.ISockMarketService;
 import com.hbhs.xb.sock.analysis.service.ISockPlateService;

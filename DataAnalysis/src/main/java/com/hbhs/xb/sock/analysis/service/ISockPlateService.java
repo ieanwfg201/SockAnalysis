@@ -1,6 +1,6 @@
 package com.hbhs.xb.sock.analysis.service;
 
-import com.hbhs.xb.sock.analysis.entity.SockPlateSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockPlateSummary;
 
 import java.util.List;
 

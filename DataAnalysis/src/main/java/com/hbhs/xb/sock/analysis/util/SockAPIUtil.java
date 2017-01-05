@@ -1,9 +1,9 @@
 package com.hbhs.xb.sock.analysis.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hbhs.xb.sock.analysis.entity.SockMarketSummary;
-import com.hbhs.xb.sock.analysis.entity.SockPlateSummary;
-import com.hbhs.xb.sock.analysis.entity.SockSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockMarketSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockPlateSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockSummary;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;

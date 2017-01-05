@@ -2,16 +2,15 @@ package com.hbhs.xb.sock.analysis.service.impl;
 
 import com.hbhs.xb.sock.analysis.dao.entity.SockPlateSummaryEntity;
 import com.hbhs.xb.sock.analysis.dao.repository.SockPlateSummaryEntityRepository;
-import com.hbhs.xb.sock.analysis.entity.SockPlateSummary;
-import com.hbhs.xb.sock.analysis.schedule.SockDataLoaderStatusHolder;
+import com.hbhs.xb.sock.analysis.http.entity.SockPlateSummary;
 import com.hbhs.xb.sock.analysis.service.ISockPlateService;
+import com.hbhs.xb.sock.analysis.util.CommonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -46,7 +45,7 @@ public class SockPlateService implements ISockPlateService {
                 if (summary == null) return null;
                 SockPlateSummaryEntity entity = new SockPlateSummaryEntity().sockPlateSummary(summary);
                 entity.setCreateID(1);
-                entity.setCreateDate(new Date());
+                entity.setCreateDate(CommonUtil.getBeiJinDate(null));
                 return entity;
             }
         });

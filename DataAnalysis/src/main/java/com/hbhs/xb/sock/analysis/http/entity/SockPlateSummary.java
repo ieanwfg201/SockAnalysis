@@ -1,4 +1,4 @@
-package com.hbhs.xb.sock.analysis.entity;
+package com.hbhs.xb.sock.analysis.http.entity;
 
 import com.hbhs.xb.sock.analysis.util.CommonUtil;
 

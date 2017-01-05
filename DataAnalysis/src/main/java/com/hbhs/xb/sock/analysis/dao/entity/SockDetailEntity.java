@@ -1,9 +1,8 @@
 package com.hbhs.xb.sock.analysis.dao.entity;
 
-import com.hbhs.xb.sock.analysis.entity.SockSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockSummary;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -31,6 +30,7 @@ public class SockDetailEntity implements Serializable {
     private long dealNumber;                 // 成交量
     private long dealAmount;                 // 成交额
     private String time;                     // 当前价格时间，格式为：HH:mm:ss
+    private DateMetrix dateMetrix = new DateMetrix();
 
     private Integer createID;
     private Date createDate;
@@ -189,7 +189,7 @@ public class SockDetailEntity implements Serializable {
     }
 
     public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+        this.createDate = createDate; dateMetrix.date(createDate);
     }
     public String getId() {
         return id;
@@ -205,5 +205,13 @@ public class SockDetailEntity implements Serializable {
 
     public void setPlateID(String plateID) {
         this.plateID = plateID;
+    }
+
+    public DateMetrix getDateMetrix() {
+        return dateMetrix;
+    }
+
+    public void setDateMetrix(DateMetrix dateMetrix) {
+        this.dateMetrix = dateMetrix;
     }
 }

@@ -1,6 +1,6 @@
 package com.hbhs.xb.sock.analysis.dao.entity;
 
-import com.hbhs.xb.sock.analysis.entity.SockPlateSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockPlateSummary;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -27,6 +27,7 @@ public class SockPlateSummaryEntity implements Serializable {
     private double aheadSockPrice;
     private double aheadSockPriceChange;
     private double aheadSockChangePersent;
+    private DateMetrix dateMetrix = new DateMetrix();
 
     private Integer createID;
     private Date createDate;
@@ -167,7 +168,7 @@ public class SockPlateSummaryEntity implements Serializable {
     }
 
     public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+        this.createDate = createDate; dateMetrix.date(createDate);
     }
 
     public String getId() {
@@ -176,5 +177,13 @@ public class SockPlateSummaryEntity implements Serializable {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public DateMetrix getDateMetrix() {
+        return dateMetrix;
+    }
+
+    public void setDateMetrix(DateMetrix dateMetrix) {
+        this.dateMetrix = dateMetrix;
     }
 }

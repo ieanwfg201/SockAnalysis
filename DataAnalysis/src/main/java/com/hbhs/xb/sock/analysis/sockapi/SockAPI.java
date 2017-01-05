@@ -1,8 +1,8 @@
 package com.hbhs.xb.sock.analysis.sockapi;
 
-import com.hbhs.xb.sock.analysis.entity.SockMarketSummary;
-import com.hbhs.xb.sock.analysis.entity.SockPlateSummary;
-import com.hbhs.xb.sock.analysis.entity.SockSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockMarketSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockPlateSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockSummary;
 
 import java.util.List;
 

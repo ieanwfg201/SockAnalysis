@@ -2,6 +2,10 @@ package com.hbhs.xb.sock.analysis.util;
 
 import org.springframework.util.StringUtils;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+
 /**
  * Created by walter.xu on 2016/12/22.
  */
@@ -40,5 +44,16 @@ public class CommonUtil {
     }
     public static boolean isEmpty(String str){
         return str==null||"".equals(str.trim());
+    }
+
+    public static Date getBeiJinDate(Date date){
+        Calendar cal  = Calendar.getInstance();
+        if (date!=null) cal.setTime(date);
+        // 获取当前时间区域差值，采用shanghai时间
+        int timeForShangHaiOffset = 8*60*60*1000;
+        int currentServerOffset = TimeZone.getDefault().getRawOffset();
+        cal.add(Calendar.MILLISECOND, -currentServerOffset);
+        cal.add(Calendar.MILLISECOND, timeForShangHaiOffset); // 转换成北京时间
+        return cal.getTime();
     }
 }

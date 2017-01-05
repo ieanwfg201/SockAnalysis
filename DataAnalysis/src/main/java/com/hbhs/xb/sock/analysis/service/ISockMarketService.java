@@ -1,7 +1,9 @@
 package com.hbhs.xb.sock.analysis.service;
 
-import com.hbhs.xb.sock.analysis.entity.SockMarketSummary;
+import com.hbhs.xb.sock.analysis.dao.entity.SockMarketMetrixEntity;
+import com.hbhs.xb.sock.analysis.http.entity.SockMarketSummary;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -9,4 +11,6 @@ import java.util.List;
  */
 public interface ISockMarketService {
     void saveSockMarketAsyn(SockMarketSummary summary);
+
+    List<SockMarketMetrixEntity> querySockMarket(String marketID, Date startDate, Date endDate, int type);
 }

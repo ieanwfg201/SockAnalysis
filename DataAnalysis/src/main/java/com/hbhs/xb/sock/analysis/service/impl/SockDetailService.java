@@ -2,15 +2,15 @@ package com.hbhs.xb.sock.analysis.service.impl;
 
 import com.hbhs.xb.sock.analysis.dao.entity.SockDetailEntity;
 import com.hbhs.xb.sock.analysis.dao.repository.SockDetailEntityRepository;
-import com.hbhs.xb.sock.analysis.entity.SockSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockSummary;
 import com.hbhs.xb.sock.analysis.service.ISockDetailService;
+import com.hbhs.xb.sock.analysis.util.CommonUtil;
 import org.apache.tomcat.util.digester.ArrayStack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -46,12 +46,13 @@ public class SockDetailService implements ISockDetailService {
                 if (summary == null) return null;
                 SockDetailEntity entity = new SockDetailEntity().sockSummary(summary);
                 entity.setPlateID(plateID);
-                entity.setCreateDate(new Date());
+                entity.setCreateDate(CommonUtil.getBeiJinDate(null));
                 entity.setCreateID(1);
                 return entity;
             }
         });
     }
+
 
 
 }

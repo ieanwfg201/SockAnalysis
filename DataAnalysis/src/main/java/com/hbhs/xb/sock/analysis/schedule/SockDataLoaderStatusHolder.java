@@ -1,12 +1,5 @@
 package com.hbhs.xb.sock.analysis.schedule;
 
-import com.hbhs.xb.sock.analysis.entity.SockMarketSummary;
-import com.hbhs.xb.sock.analysis.entity.SockPlateSummary;
-import com.hbhs.xb.sock.analysis.entity.SockSummary;
-
-import java.util.Date;
-import java.util.concurrent.ConcurrentLinkedQueue;
-
 /**
  * Created by walter.xu on 2016/12/27.
  */

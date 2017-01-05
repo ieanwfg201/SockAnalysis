@@ -1,6 +1,6 @@
 package com.hbhs.xb.sock.analysis.service;
 
-import com.hbhs.xb.sock.analysis.entity.SockSummary;
+import com.hbhs.xb.sock.analysis.http.entity.SockSummary;
 
 import java.util.List;
 
@@ -10,4 +10,5 @@ import java.util.List;
 public interface ISockDetailService {
 
     void saveSockDetailListAsyn(List<SockSummary> summaryList, String plateID);
+
 }
